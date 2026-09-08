@@ -75,12 +75,12 @@ is the small truss at the centre.*
 <!-- 04 — DOPLNIT: reálná fotka gantry nosníku s tou jednou vzpěrou uprostřed. -->
 
 **Where 3D printing belongs and where it doesn't.** Printed PET-G is fine for
-motor mounts, endstop brackets and covers. It is not fine for anything holding
+motor mounts, cable guides and covers. It is not fine for anything holding
 geometry under dynamic load — plastic is too elastic, and once the motors run,
 the accelerating masses turn that compliance into position error. Those parts are
-waterjet-cut from 3 mm aluminium plate instead. Printed parts also fail between
-layers when loaded perpendicular to them, so print orientation was part of the
-design, not an afterthought (PET-G, 0.2 mm layers, 30 % infill, Prusa i3 MK2.5S).
+waterjet-cut from 3 mm aluminium plate instead. On the printed parts that were fitted, the load acted perpendicular to the layers — the direction where an FDM part is weakest, because it fails at the layer bonds — so print orientation was a design decision, not an afterthought (PET-G, 0.2 mm layers, 30 % infill, Prusa i3 MK2.5S).
+
+The printed parts were only simulated roughly. An FDM print is anisotropic — its stiffness and strength differ with direction and depend on layer adhesion, infill and print settings — so no single material model captures the as-printed part accurately. I treated those simulations as a sanity check on shape and load path, not as numbers to trust, and kept anything structural in aluminium.
 
 ![3D-printed PET-G motor mount](images/05-printed-mount.jpg)
 
@@ -122,10 +122,12 @@ G-code stream.
 motors — it was sized for masses well above the actual ones to leave room for later
 upgrades, and the result is a machine whose speed is limited by the drives rather
 than by stiffness. The Z-axis support deflects 0.115 mm at 100 N, the largest number
-on the machine and the first thing I'd stiffen. Two gaps I don't paper over: the
-routing spindle was designed but the machine was never taken to actual milling, and
-positioning accuracy was never measured against a reference. The laser configuration
-is what proved the machine could be built, wired and driven end to end.
+on the machine and the first thing I'd stiffen. The gaps I don't paper over: the
+prototype ran fully open-loop — no endstops, no homing and no position feedback of
+any kind were fitted — so there was no reference to home or measure against; the
+routing spindle was designed but the machine was never taken to actual milling; and
+positioning accuracy was therefore never quantified. The laser configuration is what
+proved the machine could be built, wired and driven end to end.
 
 ## Thesis
 
