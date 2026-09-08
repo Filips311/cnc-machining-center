@@ -25,6 +25,9 @@ a working machine that cuts.
 
 *As designed in Creo — the full assembly the build was worked out from.*
 
+<!-- CAD STEP: až přidáš model, ulož ho jako cad/cnc-assembly.step a odkomentuj řádek níž. -->
+<!-- **Full CAD model:** the complete assembly is available as a neutral STEP file — [`cad/cnc-assembly.step`](cad/cnc-assembly.step). -->
+
 ## Specification
 
 | | |
