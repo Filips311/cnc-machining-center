@@ -13,3 +13,13 @@ dist/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Raw photo originals (keep local, do not publish)
+images/IMG_*
+images/_originals/
+
+# Claude scratch
+Claude outputs/
+images/630667d3-*.mp4
+images/port_sim2.JPG
+images/cela_sestava_render.jpg
